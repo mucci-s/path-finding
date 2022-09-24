@@ -4,7 +4,8 @@ import PathFinder from './PathFinder/PathFinder';
 function App() {
   return (
     <div className='App'>
-      <PathFinder></PathFinder>
+      <h2>ciaoooooooo</h2>
+      {/* <PathFinder></PathFinder> */}
     </div>
   );
 }
