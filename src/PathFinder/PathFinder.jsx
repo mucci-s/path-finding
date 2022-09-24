@@ -547,13 +547,13 @@ export default class PathFinder extends Component {
         <Button  
         style={{ fontFamily: "sans-serif" , margin:"20px 20px 0 0" }} 
         id="btn-maze" className="btn" variant="contained" 
-        size="large" color="secondary"
+        size="large" 
         onClick={() => this.cleanPath()}> Clean Path </Button>  
               
         <Button  
         style={{ fontFamily: "sans-serif" , margin:"20px 0 0 20px" }} 
         id="btn-maze" className="btn" variant="contained" 
-        size="large" color="secondary"
+        size="large"
         onClick={() => this.clean()}> Clean Board </Button>
       </footer>        
       </div>
