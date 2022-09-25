@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { styled } from '@mui/material/styles';
+
 import Button from '@mui/material/Button';
 import Queue from "../utils/Queue.js";
 import Node from "./Node/Node";
@@ -17,7 +17,7 @@ const wWindow = window.innerWidth;
 const hWindow = window.innerHeight;
 
 var MAZE_HEIGHT = 15;
-var MAZE_WIDTH = 50;
+var MAZE_WIDTH = 46;
 
 
 export default class PathFinder extends Component {
@@ -207,7 +207,7 @@ export default class PathFinder extends Component {
         currentNode = this.getMinNodeValue(openSet,fScore);
       if(currentNode === JSON.stringify(this.state.targetNode)){
         this.animate(cameFrom)
-        this.setState({foundTarget: true})
+        // this.setState({foundTarget: true})
         found = true;
         break;
       }
@@ -273,7 +273,7 @@ export default class PathFinder extends Component {
 
     nodesVisited = new Map(nodesVisited);
     let nodes = Array.from(nodesVisited.keys());
-    for (let i = 1; i < nodesVisited.size; i++) {
+    for (let i = 0; i < nodesVisited.size; i++) {
       setTimeout(() => {
         const node = JSON.parse(nodes[i]);
 
@@ -383,7 +383,7 @@ export default class PathFinder extends Component {
   }
 
   mazeGenerator(node, visited){
-    const grid = this.state.grid;
+    
     visited.add(JSON.stringify(node))
     let curNode = node;
     let nextNodes = [];
